@@ -1,0 +1,74 @@
+<div class="animate__animated animate__fadeIn" #view> <!--was gonna do something dynamic here, todo -->
+    <h1 style="color: white">Education History</h1>
+    <img src="assets/tigers.png" class="logo"/>
+    <br/>
+    <h3>University of Memphis - Class of 2022</h3>
+    <h4 style="text-align: center; color: white">BSCS - Department of Computer Science - Overall GPA 3.48</h4>
+    <h5 style="text-align: center; color: white">Relavent Courseworks:</h5>
+    <div id="box" #box>
+        <mat-grid-list [cols]="columns" (window:resize)="setColumns()" rowHeight="500px" width="100%">
+                <mat-grid-tile [style.background]="'lightgrey'">
+                    <mat-grid-tile-header [style.background]="'blue'"><p style="color:white">Core curriculum:</p></mat-grid-tile-header>
+                        <mat-list dense>
+                            <mat-list-item>- CS1:Intro Comp Science</mat-list-item>
+                            <mat-list-item>- CS2: OOP and Data Structures</mat-list-item>
+                            <mat-list-item>- Database Process and Design</mat-list-item>
+                            <mat-list-item>- Computer Org/Architecture</mat-list-item>
+                            <mat-list-item>- Design/Analysis Algorithms</mat-list-item>
+                        </mat-list>
+                    <mat-list dense style="display: inline-block">
+                            <mat-list-item>- Software Engineering</mat-list-item>
+                            <mat-list-item>- Network/Info Assurance</mat-list-item>
+                            <mat-list-item>- Capstone Software Proj</mat-list-item>
+                            <mat-list-item>- Programming Languages</mat-list-item>
+                            <mat-list-item>- Models of Computation</mat-list-item>
+                    </mat-list>     
+                </mat-grid-tile>
+                <mat-grid-tile [style.background]="'lightgrey'">
+                    <mat-grid-tile-header [style.background]="'blue'"><p style="color:white">Artificial Intelligence and Machine Learning:</p></mat-grid-tile-header>
+                    <p style="padding: 10%">
+                        Intro Artificial Intelligence: <br/>
+                        Covering of linear models, non-linear models, convulutional neural networks, LSTM, AutoEncoders/Variational AutoEncoder, concepts of exploitation vs exploration in q-learning, and finally, deep q-learning. 
+                        Created a final project that involved training the object detection model YOLOv5s (smallest parameter amount, less accurate, but faster) to detect objects in a game and then use the detection to create an aim assist.
+                    </p>
+                </mat-grid-tile>
+                <mat-grid-tile [style.background]="'lightgrey'">
+                    <mat-grid-tile-header [style.background]="'blue'"><p style="color:white">Forensics and Cybersecurity:</p>
+                    </mat-grid-tile-header>
+                    <p style="padding: 10%">Digital Forensics:
+                        <br/>
+                        Societal and legal impact of computer activity: computer crime, intellectual property, privacy
+                        issues, legal codes; risks, vulnerabilities, and countermeasures; methods and standards for extraction, preservation,
+                        and deposition of legal evidence in a court of law.
+                        
+                    </p>
+                </mat-grid-tile>
+                <mat-grid-tile [style.background]="'lightgrey'">
+                    <mat-grid-tile-header [style.background]="'blue'"><p style="color:white">Operating Systems and Computer Architecture:</p></mat-grid-tile-header>
+                    <div style="padding: 10%; margin-top: 20%">
+                        <p>
+                            - Operating Systems:
+
+                            Hierarchy of storage devices, I/O buffering, interrupts, channels; multiprogramming,
+                            processor and job scheduling, memory management: paging, segmentation, and virtual memory; management of
+                            asynchronous processes; interrupt procedure calls, process stateword and automatic switch instructions,
+                            semaphores, concurrency; security and recovery procedures.
+                        </p>
+                        <p>
+                            - Computer Org/Architecture: 
+                    
+                            Basic concepts in assembly language programming, including logic, comparing and branching,
+                            interrupts, macros, procedures, arrays, program design, testing, debugging, loading, and linking; combinational,
+                            arithmetic and logical circuits ALU; memory circuits, latches, flip-flops, registers; computer structure; fetch-execute
+                            cycles, clocks and timing; microprogramming and microarchitecture; data path, timing, sequencing; cache memory
+                            organization; RISC architectures. 
+                        </p>
+                    </div>
+
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+</div>
+
+
+

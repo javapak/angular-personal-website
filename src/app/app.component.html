@@ -1,0 +1,16 @@
+<div class="menu-bar">
+<button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+<h4 style="display:inline">James "Alex" Pakis</h4>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="navigate('About')">About</button>
+    <button mat-menu-item  (click)="navigate('Education')">Education</button>
+    <button mat-menu-item  (click)="navigate('Projects')">Projects</button>
+    
+</mat-menu>
+</div>
+<br/>
+<ng-template #dynamic>
+    <app-about></app-about>
+</ng-template>
+
+<router-outlet></router-outlet>

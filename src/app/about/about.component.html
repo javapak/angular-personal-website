@@ -1,0 +1,51 @@
+<div class="bg1">
+<mat-card style="max-width: 60%; margin-left:auto; margin-right:auto;" class="animate__animated animate__fadeIn">
+    <mat-card-title-group> 
+        <mat-card-title>
+            <img mat-card-avatar src="assets/avatar.jpg" style="height: 10vw; width: 10vw; display: block"/>
+            <p style="padding-top: 10%">James Alexander Pakis</p>
+        </mat-card-title>
+        <mat-card-subtitle>
+            Programmer/Engineer
+        </mat-card-subtitle>
+        
+        <mat-card-subtitle>Location: Memphis, TN</mat-card-subtitle>
+    </mat-card-title-group>
+    
+    <mat-card-content>
+        <h2>Skills: Java, C# (.NET), Python, Javascript/Typescript, Angular, Rust</h2>
+        <p style="display: inline-block">
+            Graduated with a BS in Computer Science on August 8, 2022 from the University of Memphis. Mastered fundamentals of Java and OOP, and always interested
+            in participating in a constant learning environment. Currently taking up practice with the Angular framework, from which this website was built, as well as .NET WPF and Avalonia
+            to fully understand MVVM design pattern. Also developing volume mixer and EQ control with Pyside6 as an application project for Windows computers. Learning history with agile scrum methodology and CI/CD lifecycle. 
+            </p>
+
+            <h2 style="padding-top: 5%">Contact me:</h2>
+            <div id="response"></div>
+            <mat-form-field appearance="fill">
+                <input id="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" placeHolder="Ex - me@gmail.com">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please specify a valid address.
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">An email is <strong>required</strong> so I
+                    can get back to you.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" style="display:flex; padding-top:5%">
+                <input id="name" matInput [formControl]="nameFormControl" [errorStateMatcher]="matcher" placeholder="Your name:">
+                <mat-error *ngIf="nameFormControl.hasError('required')">
+                    A name for contact purposes is also <strong>required</strong>.
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" style="padding-top: 5%; width:50%;">
+                <textarea matInput id="body" placeholder="Your inquiry:" [formControl]="inquiryFormControl" [errorStateMatcher]="matcher"></textarea>
+                <mat-error *ngIf="inquiryFormControl.hasError('required')">
+                    A message body is <strong>required</strong>.
+                </mat-error>
+            </mat-form-field>
+</mat-card-content>
+<button mat-icon-button (click) = "sendMessage()"><mat-icon>send</mat-icon></button>
+<button mat-icon-button (click)="emailFormControl.reset(); inquiryFormControl.reset(); nameFormControl.reset();"><mat-icon>clear</mat-icon></button>
+</mat-card>
+</div>
